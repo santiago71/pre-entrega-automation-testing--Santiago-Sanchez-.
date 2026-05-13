@@ -33,7 +33,7 @@ El proyecto fue desarrollado siguiendo buenas prácticas de automatización QA, 
 
 ## Instalación
 
-`git clone <URL_DEL_REPOSITORIO>`
+`git clone https://github.com/santiago71/pre-entrega-automation-testing--Santiago-Sanchez-..git`
 
 ## Instalación de Dependencias
 
