@@ -6,6 +6,7 @@ from page.inventory_page import InventoryPage
 from page.cart_page import CartPage
 import os
 
+
 @pytest.fixture
 def driver():
 
@@ -15,18 +16,16 @@ def driver():
     options.add_argument("--headless=new")
     options.add_argument("--window-size=1920,1080")
 
-   
     driver = webdriver.Chrome(options=options)
 
-  
     yield driver
 
-    
     driver.quit()
+
 
 @pytest.fixture
 def login_p(driver):
-    
+
     return LoginPage(driver)
 
 
@@ -34,10 +33,11 @@ def login_p(driver):
 def inventory_page(driver):
 
     page = LoginPage(driver)
-    
+
     page.login("standard_user", "secret_sauce")
 
     return InventoryPage(driver)
+
 
 @pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_makereport(item, call):
